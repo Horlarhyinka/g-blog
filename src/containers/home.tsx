@@ -47,7 +47,7 @@ export const Home = () =>{
             }
         </div>
         <a href="/new" >
-        <span className="p-8 bg-blue-600 fixed right-8 bottom-8 rounded-full drop-shadow-sm" >
+        <span className="p-6 bg-blue-600 fixed right-8 bottom-8 rounded-full drop-shadow-sm z-40" >
             <Icon icon="icons8:create-new" className="text-white font-bold" style={{fontSize: "28px"}} />
         </span>
         </a>
