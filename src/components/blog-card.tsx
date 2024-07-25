@@ -16,12 +16,12 @@ interface BlogProp{
 export const BlogCard = (props:BlogProp) =>{
     const dateTime = new Date(props.blog.createdAt)
     return <article key={props.blog._id} className="bg-white flex max-w-xl flex-col items-start justify-between text-left box-border p-4 shadow-sm shadow-gray-200 bg-blend-normal">
-    <div className="flex items-center gap-x-4 text-xs">
-      <time className="text-gray-500">
+    <div className="items-center gap-x-4 text-xs my-4">
+      <time className="text-gray-500 block w-full">
         {dateTime.getFullYear()} - {dateTime.getMonth()} - {dateTime.getDate()}
       </time>
       {props.blog.tags.map(tag=><a
-        className=" relative z-10 rounded-full bg-gray-200 px-3 py-1.5 font-medium text-gray-600 hover:text-white hover:bg-gray-600"
+        className=" relative z-10 rounded-full bg-gray-200 px-3 py-1.5 font-medium text-gray-600 hover:text-white hover:bg-gray-600 inline-block m-1"
       >
         {tag}
       </a>)}

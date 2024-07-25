@@ -43,25 +43,25 @@ export function PreviewBlog(){
         </p>
       </div>
     </div>
-    <article className="box-border w-fit" >
-        <h1 className="title text-2xl font-semibold mx-4 mt-4 mb-8 text-gray-800">
+    <article className="box-border w-fit  px-3 py-1.5 " >
+        <h1 className="title text-xl font-semibold mx-4 mt-4 mb-8 text-gray-800">
             {blog.title}
         </h1>
-        <div className="flex items-center gap-x-4 text-xs mx-5 mb-8">
-        <time className="text-gray-500">
+        <div className="items-center gap-x-4 text-xs my-4">
+        <time className="text-gray-500 block w-full px-4">
         {(new Date(blog!.createdAt)).getFullYear()} - {(new Date(blog!.createdAt)).getMonth()} - {(new Date(blog!.createdAt)).getDate()}
         </time>
-        <div>
+        <div className="px-4 mt-4" >
            {
             blog.tags.map((tag, i)=><a
             key={i}
-            className=" relative z-10 rounded-full bg-gray-200 px-3 py-1.5 font-medium text-gray-600 hover:text-white hover:bg-gray-600" > {tag} </a>)
+            className=" relative z-10 rounded-full bg-gray-200 px-3 py-1.5 font-medium text-gray-600 hover:text-white hover:bg-gray-600 inline-block m-1" > {tag} </a>)
             }
         </div>
 
         </div>
       
-        <p className="content text-gray-700 font-normal ml-4 p-2 break-words block w-fit xl:max-w-lg">
+        <p className="content font-normal ml-4 p-2 break-words block w-fit xl:max-w-lg mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
             {blog.content}
         </p>
 
