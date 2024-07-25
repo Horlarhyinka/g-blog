@@ -1,5 +1,4 @@
 import axios from "axios"
-// import blogs from "../assets/blogs"
 import { BlogCard } from "../components/blog-card"
 import { SearchSection } from "../components/search-section"
 import { useEffect, useState } from "react"

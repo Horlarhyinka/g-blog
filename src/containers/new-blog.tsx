@@ -16,7 +16,7 @@ export default function NewBlog() {
         data.tags = data.tags.toString().split(",") as any
       }
       console.log(data)
-      const res = await axios.post("http://localhost:8000/api/v1/blogs", data, {
+      await axios.post("http://localhost:8000/api/v1/blogs", data, {
         headers:{Authorization:  `Bearer ${token}`}
       })
       window.location.assign("/")

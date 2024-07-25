@@ -1,5 +1,5 @@
 
-import { Route, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 const AuthRoute = (prop: { Component: any }) => {
   const isAuthenticated =  !!localStorage.getItem("token");
