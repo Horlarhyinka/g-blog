@@ -2,7 +2,7 @@ import axios from 'axios'
 import { RefObject, useRef, MouseEvent } from 'react'
 
 export default function NewBlog() {
-
+  const backendUrl = import.meta.env.VITE_APP_BACKEND_URL
 
   const formRef = useRef() as RefObject<HTMLFormElement>
 
@@ -16,7 +16,7 @@ export default function NewBlog() {
         data.tags = data.tags.toString().split(",") as any
       }
       console.log(data)
-      await axios.post("http://localhost:8000/api/v1/blogs", data, {
+      await axios.post(backendUrl + "blogs", data, {
         headers:{Authorization:  `Bearer ${token}`}
       })
       window.location.assign("/")
